@@ -57,19 +57,19 @@ a:active {
   padding: var(--section-header-padding);
 }
 
-.section-title {
-  font-family: var(--font-family-title);
-  font-size: var(--font-size-xx-large);
-  margin: var(--section-title-margin);
-  color: var(--section-title-color);
-}
-
 .section-body {
   padding: var(--section-body-padding);
 }
 
 .section-footer {
   padding: var(--section-footer-padding);
+}
+
+.section-title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xx-large);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
 }
 
 .section-tagline {
@@ -83,10 +83,6 @@ a:active {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
-}
-
-footer {
-  padding: var(--footer-padding);
 }
 
 :root {
@@ -118,4 +114,8 @@ footer {
   --section-footer-padding: 3rem 0 0;
   --section-footer-align: center;
   --footer-padding: 5rem 0 1rem;
+}
+
+.footer {
+  padding: var(--footer-padding);
 }
