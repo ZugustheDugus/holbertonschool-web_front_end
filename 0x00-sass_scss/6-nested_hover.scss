@@ -1,0 +1,9 @@
+/* Nested Hover */
+$bucolor: #FF0000;
+$buhovcolor: #00FF00;
+button {
+  color: $bucolor;
+  :hover {
+    color: $buhovcolor;
+  }
+}
