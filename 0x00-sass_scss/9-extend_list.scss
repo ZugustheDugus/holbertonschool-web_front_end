@@ -1,0 +1,18 @@
+/* Extended */
+$infont: 12px;
+$succolor: #00FF00;
+$warncolor: #FF0000;
+
+.info {
+  font-size: $infont;
+}
+
+.success {
+  color: $succolor;
+  @extend .info;
+}
+
+.warning {
+  color: $warncolor;
+  @extend .info;
+}
