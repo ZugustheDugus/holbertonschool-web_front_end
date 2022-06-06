@@ -612,6 +612,10 @@
     list-style: none;
   }
 
+  .tag-list li {
+    display: inline;
+  }
+
   .tag-list li::after {
     content: ", ";
   }
