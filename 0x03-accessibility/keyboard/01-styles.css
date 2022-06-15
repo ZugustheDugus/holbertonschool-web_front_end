@@ -669,7 +669,13 @@
     padding-top: 45%;
     opacity: 0;
   }
-  
+
+  .card-work .card-title a:focus, .card-work:hover .card-title a {
+    opacity: 1;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
   .card-work .card-title a::after {
     position: absolute;
     top: 0;
@@ -693,7 +699,6 @@
     .card-work .card-title a {
       display: block;
       padding: 2rem 1rem 0 1rem;
-      opacity: 0;
     }
 
     .card-work:hover .card-title a {
