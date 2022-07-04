@@ -1,1 +1,1 @@
-Boostrap project for Holbertonschool by Hayden M. Cooper
+Bootstrap project for Holbertonschool by Hayden M. Cooper
