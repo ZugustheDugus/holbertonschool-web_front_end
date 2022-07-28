@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 0</title>
+    </head>
+
+    <body>
+      <input type="text" id="firstname" placeholder="Firstname">
+      <input type="email" id="email" placeholder="Email">
+      <h1>Login to the website</h1>
+      <button type="submit" id="login">Log me in</button>
+      <h1>Cookies</h1>
+      <button type="submit" id="show">Show the cookies</button>
+
+      <script type="application/javascript">
+        let Login = document.getElementById('login');
+        let show = document.getElementById('show');
+
+        Login.onclick = function() {
+          setCookies();
+        }
+
+        show.onclick = function() {
+          showCookies();
+        }
+
+        const setCookies = () => {
+        let curdate = new Date();
+        let expdate = new Date();
+
+        expdate.setTime(curdate.getDay() + 10);
+        document.cookie = `firstname = ${document.getElementById('firstname').value}`;
+        document.cookie = `email = ${document.getElementById('email').value}`;
+        }
+
+        const getCookie = (name) => {
+          let nname = name + '=';
+          let decodCookie = decodeURIComponent(document.cookie);
+          let decat = decodCookie.split(';');
+          for (let a = 0; a < decat.length; a++) {
+            let d = decat[a];
+            while(a.charAt(0) == ' ') {
+              d = d.substring(1);
+            }
+            if (d.indexOf(nname) == 0) {
+              return d.substring(nname.length, d.length);
+            }
+          }
+          return '';
+        }
+
+        const showCookies = () => {
+          let i = document.cookie;
+          let x = document.createElement('p');
+
+          x.textContent = `Email: ${getCookie('email')} - Firstname: ${getCookie('firstname')}`;
+          document.body.appendChild(x);
+        }
+      </script>
+
+    </body>
+
+</html>
