@@ -26,11 +26,11 @@
 				displayCart();
 			}
 
-			function addItemToCart(item) {
+			const addItemToCart = (item) => {
 				localStorage.setItem(item, true);
 			}
 
-			function createStore() {
+			const  createStore = () => {
 				let ul = document.createElement('ul');
 
 				for (item of availableItems) {
